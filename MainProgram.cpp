@@ -148,13 +148,13 @@ public:
 
         if(owner.empty()){
 
-            invalid_argument("Owner cannot be empty");
+        throw    invalid_argument("Owner cannot be empty");
 
     }
 
         if(initialBalance < 0 ){
 
-            invalid_argument("İnitial balance cannot be negative");
+      throw      invalid_argument("İnitial balance cannot be negative");
 
         }
 
@@ -241,7 +241,7 @@ public:
 
         if(amount<=0){
 
-            throw runtime_error("Transfer amount must be positive");
+            throw invalid_argument("Transfer amount must be positive");
 
         }
 
